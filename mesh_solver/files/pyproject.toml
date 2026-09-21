@@ -1,0 +1,35 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solver_replacement"
+version = "0.1.0"
+description = "Mesh Solver Replacement - Channel optimization KPI processing pipeline for Databricks"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "loletpike", email = "Lpike97@gmail.com"},
+]
+keywords = ["databricks", "data-pipeline", "mesh-wifi", "solver", "channel-optimization"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = []
+
+[project.scripts]
+main = "solver_replacement.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["solver_replacement*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md", "*.yml", "*.yaml"]
